@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPTX to PDF Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>PowerPoint to PDF Converter</h1>
+    <p>Convert your PowerPoint presentations to PDF format</p>
+    
+    <div class="upload-container">
+      <form id="uploadForm" enctype="multipart/form-data">
+        <div class="file-input-container">
+          <input type="file" id="pptFile" name="pptFiles" accept=".ppt,.pptx" multiple required>
+          <label for="pptFile" class="file-label">
+            <span class="button">Choose files</span>
+            <span class="file-name">No files chosen</span>
+          </label>
+        </div>
+        
+        <button type="submit" id="convertBtn" disabled>Convert to PDF</button>
+      </form>
+    </div>
+    
+    <div id="progressContainer" class="progress-container hidden">
+      <div class="progress-bar">
+        <div class="progress" id="progressBar"></div>
+      </div>
+      <p id="statusText">Converting...</p>
+    </div>
+    
+    <div id="resultContainer" class="result-container hidden">
+      <h3>Conversion Complete!</h3>
+      <div id="downloadLinks"></div>
+    </div>
+    
+    <div id="errorContainer" class="error-container hidden">
+      <h3>Error</h3>
+      <p id="errorMessage"></p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html> 
